@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 $primaColor: #8A2D4E;
 $secondColor: red;
 
-.display-1 {
-  color: $primaColor;
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.apod-title {
+  text-align: center;
+}
+
+.search-img {
+  width: 200px;
+  height: 200px;
 }

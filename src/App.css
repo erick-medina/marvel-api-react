@@ -1,4 +1,12 @@
-.display-1 {
-  color: #8A2D4E; }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  font-family: 'Open Sans', sans-serif; }
+
+.apod-title {
+  text-align: center; }
+
+.search-img {
+  width: 200px;
+  height: 200px; }
 
 /*# sourceMappingURL=App.css.map */
