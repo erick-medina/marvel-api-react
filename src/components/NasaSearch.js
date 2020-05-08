@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import {Container, Row, Col} from "react-bootstrap";
+import SearchJson from './../search.json';
 
 export function NasaSearch() {
     const [data, setData] = useState([]);
@@ -25,10 +26,12 @@ export function NasaSearch() {
 
     return (
         <Container>
-            <Row>
-            <input placeholder='Search for ... (e.g. "Sun")' value={query} onChange={onChangeHandler}/>
+            <Row className='search-bar-container'>
+                <Col className=''>
+                    <input placeholder='Search for ... (e.g. "Sun")' value={query} onChange={onChangeHandler}/>
+                </Col>
             </Row>
-            <Row>
+            <Row className='m-auto'>
                 <Col>{data.map(item => (
                     <img className='search-img' onClick={item.data} src={item.links[0].href} alt=""/>
                 ))}

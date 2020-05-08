@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, Media} from "react-bootstrap";
 import './../App.scss';
 import ApodJson from './../Apod.json';
 
@@ -22,12 +22,31 @@ export function Apod() {
 
         return (
             <Container>
-                <h1 className='apod-title'>Astronomy Picture of the Day</h1>
-                <p>Written by: {copyright}</p>
-                <p>Date: {date}</p>
-                <h1>{title}</h1>
-                <h4>{explanation}</h4>
-                <img src={url} alt=""/>
+                <Row className='my-3'>
+                    <Col>
+                        <h1 className='display-3'>Astronomy Picture of the Day</h1>
+                    </Col>
+                </Row>
+                <Row className='mb-4'>
+                    <Col md={4}>
+                        <p>Written by: {copyright}</p>
+                    </Col>
+                    <Col md={4}>
+                        <p>Date: {date}</p>
+                    </Col>
+                </Row>
+                <Media>
+                    <img
+                        width={300}
+                        height={300}
+                        className="mr-3"
+                        src={url}
+                    />
+                    <Media.Body>
+                        <h5 className='display-4'>{title}</h5>
+                        <p>{explanation}</p>
+                    </Media.Body>
+                </Media>
             </Container>
         )
 }

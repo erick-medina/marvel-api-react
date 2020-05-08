@@ -5,12 +5,19 @@ $secondColor: red;
 
 * {
   font-family: 'Open Sans', sans-serif;
+  //background: url("img/blue-and-white-planet-display-87009.jpg");
 }
 
 .apod-title {
   text-align: center;
 }
+.search-bar-container {
+  background-image: url("img/blue-and-white-planet-display-87009.jpg");
+  margin-top: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
+}
 .search-img {
   width: 200px;
   height: 200px;
