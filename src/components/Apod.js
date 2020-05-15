@@ -5,17 +5,17 @@ import './../App.scss';
 import ApodJson from './../Apod.json';
 
 export function Apod() {
-    const [postOfTheDay, setPostOfTheDay] = useState(ApodJson);
+    const [postOfTheDay, setPostOfTheDay] = useState([]);
 
     useEffect(() => {
-       /* axios
+        axios
             .get('https://api.nasa.gov/planetary/apod?api_key=osLuawkKpG2nuet7Xrc6kNQdP2oB3ZgxFQowUEMr')
             .then(response => {
                 setPostOfTheDay(response.data)
             })
             .catch(error => {
                 console.log(error)
-            });*/
+            });
     }, []); // empty array as a second argument to run this once and avoid infinite loop. This would be like componentDidMount with classes
 
         const {date, title, explanation, url, copyright} = postOfTheDay; // object destructuring
