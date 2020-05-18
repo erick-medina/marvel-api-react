@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Container, Row, Col, Media} from "react-bootstrap";
 import './../App.scss';
 import ApodJson from './../Apod.json';
+import {Navbar} from "./Navbar";
 
 export function Apod() {
     const [postOfTheDay, setPostOfTheDay] = useState([]);
@@ -18,13 +19,15 @@ export function Apod() {
             });
     }, []); // empty array as a second argument to run this once and avoid infinite loop. This would be like componentDidMount with classes
 
-        const {date, title, explanation, url, copyright} = postOfTheDay; // object destructuring
+    const {date, title, explanation, url, copyright} = postOfTheDay; // object destructuring
 
-        return (
+    return (
+        <div>
+            <Navbar/>
             <Container>
                 <Row className='my-3'>
                     <Col>
-                        <h1 className='display-3'>Astronomy Picture of the Day</h1>
+                        <h1 className='display-4 text-center'>Astronomy Picture of the Day</h1>
                     </Col>
                 </Row>
                 <Row className='mb-4'>
@@ -48,5 +51,6 @@ export function Apod() {
                     </Media.Body>
                 </Media>
             </Container>
-        )
+        </div>
+    )
 }

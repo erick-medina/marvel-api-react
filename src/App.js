@@ -1,20 +1,22 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 import './App.scss';
-import Button from 'react-bootstrap/Button';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {Apod} from './components/Apod';
-import {NasaSearch} from "./components/NasaSearch";
-import HomePage from "./components/HomePage";
+import {NasaSearch} from "./components/NasaSearch"
+import {HomePage} from "./components/HomePage";
 
 function App() {
-
-  return (
-    <div className="App">
-        <HomePage />
-        <Apod />
-        <NasaSearch />
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <Switch>
+                    <Route path="/" exact component={HomePage}/>
+                    <Route path="/apod" component={Apod}/>
+                    <Route path="/search" component={NasaSearch}/>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

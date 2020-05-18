@@ -2,11 +2,23 @@
 * {
   font-family: 'Open Sans', sans-serif; }
 
+::placeholder {
+  color: crimson; }
+
+.display-3 {
+  color: rgba(250, 250, 250, 0.63);
+  text-align: center;
+  margin-top: 12rem;
+  margin-bottom: 12rem; }
+
+.content-home {
+  font-size: 20px;
+  color: #FAFAFA; }
+
 .apod-title {
   text-align: center; }
 
 .search-bar-container {
-  background-image: url("img/blue-and-white-planet-display-87009.jpg");
   margin-top: 20px;
   padding-top: 100px;
   padding-bottom: 100px; }
@@ -14,5 +26,19 @@
 .search-img {
   width: 200px;
   height: 200px; }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: crimson;
+  color: #FAFAFA; }
+  .nav .nav-link {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none; }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,18 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-$primaColor: #8A2D4E;
-$secondColor: red;
+$backgroundColor: crimson;
+$backgroundColor2: #FAFAFA;
 
 * {
   font-family: 'Open Sans', sans-serif;
-  //background: url("img/blue-and-white-planet-display-87009.jpg");
+}
+
+::placeholder {
+  color: $backgroundColor;
+}
+.display-3 {
+  color: rgba(250, 250, 250, 0.63);
+  text-align: center;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+.content-home {
+  font-size: 20px;
+  color: $backgroundColor2;
 }
 
 .apod-title {
   text-align: center;
 }
 .search-bar-container {
-  background-image: url("img/blue-and-white-planet-display-87009.jpg");
   margin-top: 20px;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -22,3 +34,20 @@ $secondColor: red;
   width: 200px;
   height: 200px;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: $backgroundColor;
+  color: $backgroundColor2;
+  .nav-link {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+}
+

@@ -6,6 +6,7 @@ import SearchJson from './../search.json';
 export function NasaSearch() {
     const [data, setData] = useState([]);
     const [query, setQuery] = useState('sun');
+    const [isData, setIsData] = useState(true);
 
     useEffect(() => {
         let ignore = false;
@@ -23,6 +24,7 @@ export function NasaSearch() {
     const onChangeHandler = event => {
         setQuery(event.target.value);
     }
+
 
     return (
         <Container>
